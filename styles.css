@@ -1,80 +1,155 @@
-html{
-  overflow: hidden; 
+@font-face {
+  font-family: my-cool-font;
+  src: url(font.ttf);
 }
 
-.container{
+
+html {
+  overflow: hidden;
+  font-family: my-cool-font;
+  font-size: 25px;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.container {
   display: flex;
   justify-content: flex-start;
 }
 
 .left-part,
-.background{
-  height:100vh;
-  width:700px;
+.background {
+  height: 100vh;
+  width: 700px;
 }
 
-.logo-box{
+.logo-box {
   position: absolute;
   width: 700px;
   background-color: rgba(7, 7, 7, 0.5);
   display: flex;
   top: 200px;
-  justify-content:center;
+  justify-content: center;
   gap: 25px;
 }
 
-.logo{
+.logo {
   height: 80px;
   align-self: center;
 }
 
-@font-face {
-  font-family: my-cool-font;
-  src: url(riesling.ttf);
-}
-
-
-.logo-text{
-  font-family: my-cool-font;
-  font-size: 80px;
+.logo-text {
+  font-size: 5s0px;
   color: white;
   letter-spacing: 7px;
   font-weight: bold;
 }
 
-.right-part{
+.right-part {
   display: flex;
   flex-direction: column;
   justify-content: centers;
   background-color: rgb(247, 226, 241);
-
+  padding-top: 25px;
 }
 
-.right-part > div{
+.right-part>div {
   flex: 1 1 0;
-  padding-left: 35px;
+  padding: 35px;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
-a{
-  color: #9a31c0;
+a {
+  color: #ae6fc5;
   font-weight: bold;
   text-decoration: none;
 }
 
-.description{
-  padding-top: 100px;
-  font-family: 'Georgia', Courier, monospace;
-  font-size: x-large;
+.description {
+  padding-right: 20px;
 }
 
-button{
+.create-account {
+  padding-top: 50px;
+  font-size: 18px;
+}
+
+
+button {
   border-radius: 10px;
   height: 40px;
   width: 180px;
   color: white;
-  background-color: #9a31c0;
-  font-family: 'Georgia', Courier, monospace;
+  background-color: #8a5f9b;
   font-weight: 600;
   font-size: 16px;
+  font-family: my-cool-font;
+  letter-spacing: 2px;
 }
 
+fieldset {
+  border: 0px;
+}
+
+
+.form {
+  display: flex;
+  background-color: #ffffff;
+}
+
+fieldset>div {
+  display: flex;
+  justify-content: left;
+  gap: 40px;
+}
+
+.first-name,
+.last-name,
+.email,
+.phone,
+.password,
+.password-repeat {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 15px;
+}
+
+legend {
+  padding-bottom: 15px;
+  padding-left: 0;
+  font-size: x-large;
+}
+
+input {
+  width: 250px;
+  height: 20px;
+  border: 2px solid #65526f;
+  border-radius: 5px;
+}
+
+
+label {
+  font-family: my-cool-font;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 900;
+}
+
+input:focus {
+  outline: 1px solid #65526f;
+  box-shadow: 2px 2px 2px rgb(59, 59, 59);
+}
+
+input:invalid {
+  border-color: red;
+}
+
+input:valid {
+  border-color: #65526f
+}
+
+.matching-txt {
+  color: red;
+  font-size: 16px;
+}
